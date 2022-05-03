@@ -137,8 +137,7 @@ function draw() {
 
      // potenciómetro controla cantidad de verde
     fill(0, colorPotenciometro, 0);
-  }
-
+  
   // dibujar elipse
   ellipse(width/2, height/2, 100, 100);
   
@@ -148,7 +147,7 @@ function draw() {
   if (datosSeparados[2] == 0) {
 
     // potenciómetro controla cantidad de rojo
-    fill(0, 0, colorPotenciometro);
+    fill(colorPotenciometro, 0, 0);
   }
   // si el botón está presionado
   else {
@@ -158,7 +157,7 @@ function draw() {
   }
 
   // dibujar elipse
-  ellipse(width/4, height/4, 100, 100);
+  ellipse(width/2, height/4, 100, 100);
   
   
 }
