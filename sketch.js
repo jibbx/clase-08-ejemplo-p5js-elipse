@@ -16,7 +16,7 @@ let nombrePuerto = "COM3";
 let datosRecibidos = "esperando...";
 
 // declarar variable para datos recibidos, separados en un arreglo
-let datosSeparados = [0, 0];
+let datosSeparados = [0, 0, 0];
 
 // setup() ocurre una vez al principio
 function setup() {
@@ -141,5 +141,24 @@ function draw() {
 
   // dibujar elipse
   ellipse(width/2, height/2, 100, 100);
+  
+  //ELIPSE 2 
+  
+  // si el botón no está presionado
+  if (datosSeparados[2] == 0) {
+
+    // potenciómetro controla cantidad de rojo
+    fill(0, 0, colorPotenciometro);
+  }
+  // si el botón está presionado
+  else {
+
+     // potenciómetro controla cantidad de verde
+    fill(0, colorPotenciometro, 0);
+  }
+
+  // dibujar elipse
+  ellipse(width/4, height/4, 50, 50);
+  
   
 }
