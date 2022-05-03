@@ -158,7 +158,7 @@ function draw() {
   }
 
   // dibujar elipse
-  ellipse(width/4, height/4, 50, 50);
+  ellipse(width/4, height/4, 100, 100);
   
   
 }
