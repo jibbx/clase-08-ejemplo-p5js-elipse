@@ -10,7 +10,7 @@ let serial;
 
 // declarar variable con nombre de puerto de Arduino
 // actualizar con nombre del puerto en tu computador
-let nombrePuerto = "COM3";
+let nombrePuerto = "/dev/tty.usbmodem143301";
 
 // declarar variable para datos recibidos
 let datosRecibidos = "esperando...";
@@ -137,7 +137,8 @@ function draw() {
 
      // potenciómetro controla cantidad de verde
     fill(0, colorPotenciometro, 0);
-  
+  }
+
   // dibujar elipse
   ellipse(width/2, height/2, 100, 100);
   
