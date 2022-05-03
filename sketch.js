@@ -10,13 +10,13 @@ let serial;
 
 // declarar variable con nombre de puerto de Arduino
 // actualizar con nombre del puerto en tu computador
-let nombrePuerto = "/dev/tty.usbmodem143301";
+let nombrePuerto = "COM3";
 
 // declarar variable para datos recibidos
 let datosRecibidos = "esperando...";
 
 // declarar variable para datos recibidos, separados en un arreglo
-let datosSeparados = [0, 0];
+let datosSeparados = [0, 0, 0];
 
 // setup() ocurre una vez al principio
 function setup() {
@@ -128,6 +128,26 @@ function draw() {
 
   // si el botón no está presionado
   if (datosSeparados[0] == 0) {
+
+    // potenciómetro controla cantidad de rojo
+    fill(colorPotenciometro, 0, 0);
+  }
+  // si el botón está presionado
+  else {
+
+     // potenciómetro controla cantidad de verde
+    fill(0, colorPotenciometro, 0);
+  }
+
+  // dibujar elipse
+  ellipse(width/2, height/2, 100, 100);
+  
+    // mapear datos recibidos desde perilla [0,1023] a rango color [0, 255]
+  let colorPotenciometro = map(datosSeparados[1], 0, 1023, 0, 255);
+  console.log(colorPotenciometro);
+
+  // si el botón no está presionado
+  if (datosSeparados[2] == 0) {
 
     // potenciómetro controla cantidad de rojo
     fill(colorPotenciometro, 0, 0);
