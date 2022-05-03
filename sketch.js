@@ -16,7 +16,7 @@ let nombrePuerto = "COM3";
 let datosRecibidos = "esperando...";
 
 // declarar variable para datos recibidos, separados en un arreglo
-let datosSeparados = [0, 0, 0];
+let datosSeparados = [0, 0];
 
 // setup() ocurre una vez al principio
 function setup() {
